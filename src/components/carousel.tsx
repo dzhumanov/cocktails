@@ -8,8 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import "swiper/swiper-bundle.css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
