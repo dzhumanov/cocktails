@@ -13,9 +13,9 @@ export const CarouselItem: React.FC<Props> = ({
   isActive,
 }) => {
   return (
-    <div className={cn("mx-auto text-center", className)}>
+    <div className={cn("mx-auto text-center cursor-pointer", className)}>
       <img
-        className="block mx-auto h-[500px] cursor-pointer"
+        className="block mx-auto h-[500px] mb-5 "
         src={item.image}
         alt={item.image}
       />
@@ -25,7 +25,7 @@ export const CarouselItem: React.FC<Props> = ({
           transition: `opacity 500ms`,
         }}
       >
-        <h3 className="font-bold uppercase text-2xl mb-2">{item.name}</h3>
+        <h3 className="font-bold uppercase text-2xl mb-6">{item.name}</h3>
         <p className="text-xl">{item.description}</p>
       </div>
     </div>

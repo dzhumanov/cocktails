@@ -14,7 +14,7 @@ html {
 
 @theme {
   --font-open: "Open Sans", "sans-serif";
-
+  --font-sans: "Open Sans", "sans-serif";
   --font-phil: "Philosopher", "sans-serif";
 
   --color-primary: #fff;
@@ -63,4 +63,42 @@ body {
 
 .fadeInUpAnimation {
   animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUpFirst {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpSecond {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  39.99% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUpFirst {
+  animation: fadeInUpFirst 0.6s ease forwards;
+}
+
+.fadeInUpSecond {
+  animation: fadeInUpSecond 1s ease forwards;
 }

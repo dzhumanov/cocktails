@@ -28,9 +28,10 @@ const items = [
     link: "garnish",
   },
 ];
+
 export const Header = () => {
   return (
-    <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 font-open">
+    <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 font-open py-3">
       <div className="justify-self-start">
         <Navbar items={items} />
       </div>

@@ -4,9 +4,9 @@ import vodka3 from "../assets/vodka-3.png";
 import { CarouselItemInterface } from "../types/type";
 import { cn } from "../utils/utils";
 import { CarouselItem } from "./carousel-item";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
+
 import "swiper/swiper-bundle.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -55,7 +55,7 @@ export const Carousel: React.FC<Props> = ({ className }) => {
   ];
 
   return (
-    <div className="block relative">
+    <div className={cn("block relative", className)}>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         speed={300}
@@ -81,7 +81,7 @@ export const Carousel: React.FC<Props> = ({ className }) => {
         {extendedItems.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="opacity-50 transition-all duration-300 ease-in-out py-10"
+            className="opacity-50 transition-all duration-300 ease-in-out py-10 pb-6"
           >
             {({ isActive }) => (
               <div
@@ -97,16 +97,16 @@ export const Carousel: React.FC<Props> = ({ className }) => {
           </SwiperSlide>
         ))}
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] z-10 flex justify-between">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] z-10 flex justify-between pointer-events-none">
           <button
             ref={prevRef}
-            className="p-5 rounded-full z-20 border border-black cursor-pointer transition-all duration-300 ease-in-out transform hover:bg-red hover:text-white hover:border-white active:scale-95 hover:shadow-lg"
+            className="p-5 rounded-full z-20 border border-black cursor-pointer transition-all duration-300 ease-in-out transform hover:bg-red hover:text-white hover:border-white active:scale-95 hover:shadow-lg pointer-events-auto"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             ref={nextRef}
-            className="p-5 rounded-full z-20 border border-black cursor-pointer transition-all duration-300 ease-in-out transform hover:bg-red hover:text-white hover:border-white active:scale-95 hover:shadow-lg"
+            className="p-5 rounded-full z-20 border border-black cursor-pointer transition-all duration-300 ease-in-out transform hover:bg-red hover:text-white hover:border-white active:scale-95 hover:shadow-lg pointer-events-auto"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
