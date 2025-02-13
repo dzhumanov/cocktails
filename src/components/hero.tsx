@@ -10,16 +10,17 @@ interface Props {
 export const Hero: React.FC<Props> = ({ className }) => {
   return (
     <div
-      className={cn("pt-40 pb-100 bg-center bg-cover relative mb-20", className)}
+      className={cn(
+        "pt-40 pb-100 bg-center bg-cover bg-no-repeat relative mb-35",
+        className
+      )}
       style={{ backgroundImage: `url(${HeroImg})` }}
     >
-      <h1 className="font-bold text-7xl w-full text-center text-primary">
+      <h1 className="font-bold font-phil text-8xl w-full text-center text-primary fadeInAnimation">
         Welcome to Cocktail
       </h1>
 
-      <Search/>
-
-
+      <Search />
     </div>
   );
 };

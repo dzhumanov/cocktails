@@ -1,6 +1,7 @@
 export interface LinkItem {
   id: number;
   label: string;
+  link: string;
 }
 
 export interface CarouselItemInterface {

@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
 @theme {
   --font-open: "Open Sans", "sans-serif";
+
+  --font-phil: "Philosopher", "sans-serif";
 
   --color-primary: #fff;
   --color-secondary: #000;
@@ -11,4 +24,43 @@
 
 body {
   margin: 0;
+}
+
+.swiper-slide-active {
+  @apply opacity-100;
+  transform: scale(1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInAnimation {
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUpAnimation {
+  animation: fadeInUp 1.5s ease-in-out;
 }
