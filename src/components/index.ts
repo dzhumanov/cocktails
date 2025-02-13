@@ -1,0 +1,9 @@
+export { Header } from "./header";
+export { Navbar } from "./navbar";
+export { Container } from "./container";
+export { Contacts } from "./contacts";
+export { Hero } from "./hero";
+export { Search } from "./search";
+export { Products } from "./products";
+export { Carousel } from "./carousel";
+export { CarouselItem } from "./carousel-item";
